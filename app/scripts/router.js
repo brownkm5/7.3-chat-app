@@ -4,12 +4,12 @@ var ReactDOM = require('react-dom');
 
 var MessageCollection = require('./models/model.js').MessageCollection;
 var LoginComponent = require('./components/login.jsx').LoginComponent;
-var ChatComponent = require('./components/chat-screen.jsx');
+var ChatComponent = require('./components/chat-screen.jsx').ChatComponent;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index',
-    'chat/': 'chat'
+    'chat/': 'chat',
   },
   initialize: function(){
     this.username = '';
@@ -23,7 +23,7 @@ var AppRouter = Backbone.Router.extend({
   chat: function(){
     var collection = new MessageCollection();
     collection.fetch();
-
+    console.log(this.username);
     ReactDOM.render(
       React.createElement(ChatComponent, {collection: collection, username: this.username}),
       document.getElementById('app')
