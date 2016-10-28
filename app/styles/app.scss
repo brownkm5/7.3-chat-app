@@ -12,6 +12,16 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
+.contain{
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+li{
+  list-style: none;
 }

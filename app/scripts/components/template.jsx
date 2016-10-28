@@ -3,7 +3,7 @@ var React = require('react');
 var TemplateComponent = React.createClass({
   render: function(){
     return (
-      <div className="container">
+      <div className='contain'>
         <div className="header well">
           <h1>Chat App</h1>
         </div>
@@ -11,7 +11,7 @@ var TemplateComponent = React.createClass({
         {this.props.children}
 
         <footer>
-          <p classnName='well'>Kevin</p>
+          <p className='well'>kevin</p>
         </footer>
       </div>
     )

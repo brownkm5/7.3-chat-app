@@ -22,7 +22,7 @@ var LoginForm = React.createClass({
     console.log('username', this.state.username);
     router.username = this.state.username;
     router.navigate('chat/', {trigger: true});
-    this.setState({username: ''});
+    // this.setState({username: ''});
   },
   render: function(){
     return (
